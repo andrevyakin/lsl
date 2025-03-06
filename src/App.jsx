@@ -1,17 +1,17 @@
-import {Route, Routes} from "react-router";
 import Navigation from "./components/Navigation.jsx";
 import Hero from "./components/Hero.jsx";
 import Footer from "./components/Footer.jsx";
+import Header from "./components/Header.jsx";
+import YMap from "./components/YMap.jsx";
 
 const App = () => {
     return (
-        <>
+        <div className="pt-[1rem]">
             <Navigation/>
-            <Routes>
-                <Route path="hero" element={<Hero />} />
-                <Route path="footer" element={<Footer />} />
-            </Routes>
-        </>
+            <Header/>
+            <YMap/>
+
+        </div>
     )
 }
 export default App

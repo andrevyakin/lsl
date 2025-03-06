@@ -1,8 +1,9 @@
-import logo from '../assets/lsk3.png'
+import logo from '../assets/lskNoBg.png'
 
 const Navigation = () => {
+
     return (
-        <nav className="bg-gray-800 min-w-[742px]">
+        <nav className="w-full z-50 bg-[#2b2d42] min-w-[742px]">
             <div className="mx-auto max-w-7xl px-2 md:py-5 sm:px-6 lg:px-8">
                 <div className="relative flex h-16 items-center justify-between">
                     <div className="absolute inset-y-0 left-0 flex items-center sm:hidden">
@@ -42,11 +43,12 @@ const Navigation = () => {
                         <div className="hidden flex-1 sm:ml-6 sm:block">
                             <div className="flex justify-center space-x-28">
                                 {/* Current: "bg-gray-900 text-white", D1efault: "text-gray-300 hover:bg-gray-700 hover:text-white" */}
-                                <a href="#"
-                                   className="rounded-md px-3 py-2 text-2xl font-medium text-gray-300 hover:bg-gray-700 hover:text-white">О Нас</a>
-                                <a href="#"
+                                <a href="#header"
+                                   className="rounded-md px-3 py-2 text-2xl font-medium text-gray-300 hover:bg-gray-700 hover:text-white">О
+                                    Нас</a>
+                                <a href="#hero"
                                    className="rounded-md px-3 py-2 text-2xl font-medium text-gray-300 hover:bg-gray-700 hover:text-white">Продукция</a>
-                                <a href="#"
+                                <a href="#footer"
                                    className="rounded-md px-3 py-2 text-2xl font-medium text-gray-300 hover:bg-gray-700 hover:text-white">Контакты</a>
                             </div>
                         </div>
@@ -61,7 +63,8 @@ const Navigation = () => {
                     {/* Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" */}
 
                     <a href="#"
-                       className="block rounded-md px-3 py-2 text-base font-medium text-gray-300 hover:bg-gray-700 hover:text-white">О нас</a>
+                       className="block rounded-md px-3 py-2 text-base font-medium text-gray-300 hover:bg-gray-700 hover:text-white">О
+                        нас</a>
                     <a href="#"
                        className="block rounded-md px-3 py-2 text-base font-medium text-gray-300 hover:bg-gray-700 hover:text-white">Продукция</a>
                     <a href="#"

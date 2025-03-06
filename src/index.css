@@ -1,1 +1,24 @@
 @import "tailwindcss";
+
+* {
+    scroll-behavior: smooth;
+}
+
+body{
+    background: #8d99ae;
+    color: #edf2f4;
+}
+
+.map-block{
+    -moz-border-radius: 14px 14px 14px 14px; /* Firefox */
+    -webkit-border-radius: 14px 14px 14px 14px; /* Safari, Chrome */
+    -khtml-border-radius: 14px 14px 14px 14px; /* KHTML */
+    border-radius: 14px 14px 14px 14px; /* CSS3 */
+
+    overflow: hidden;
+
+    position: relative;
+
+    /* chrome bug fix */
+    -webkit-mask-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAIAAACQd1PeAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAA5JREFUeNpiYGBgAAgwAAAEAAGbA+oJAAAAAElFTkSuQmCC);
+}
