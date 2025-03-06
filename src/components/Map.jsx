@@ -1,17 +1,17 @@
 import {useEffect} from "react";
 
-const YMap = () => {
+const Map = () => {
     const loadScript = (src, onLoad) => {
         const script = document.createElement("script");
-
         script.src = src;
+        script.strategy = "beforeInteractive"
         script.async = true;
-        document.getElementById("header").after(script);
+        document.head.appendChild(script);
         script.onload = onLoad;
     };
 
     const init = () => {
-        const map = new ymaps.Map("map", {
+        const map = new window.ymaps.Map("map", {
             // Координаты центра карты.
             // Порядок по умолчанию: «широта, долгота».
             // Чтобы не определять координаты центра карты вручную,
@@ -22,7 +22,7 @@ const YMap = () => {
             zoom: 12,
             //type: 'yandex#hybrid'
         });
-        const placemark = new ymaps.Placemark([48.284219, 38.817179], {
+        const placemark = new window.ymaps.Placemark([48.284219, 38.817179], {
             iconContent: 'Карьер ЛСК',
             balloonContent: 'пос. Ковыльное, ул. Пролетарская, 38'
         }, {
@@ -36,7 +36,7 @@ const YMap = () => {
         /*.add(new ymaps.control.MiniMap({     // обзорная карта заданного типа
             type: 'yandex#publicMap'}))*/
 
-        const polygon = new ymaps.Polygon([[
+        const polygon = new window.ymaps.Polygon([[
                 [48.284445882, 38.805558086],
                 [48.286112548, 38.805835864],
                 [48.287501437, 38.808891420],
@@ -69,7 +69,7 @@ const YMap = () => {
 
     useEffect(() => {
         loadScript(`https://api-maps.yandex.ru/2.0-stable/?apikey=${import.meta.env.VITE_APY_KEY}&load=package.full&lang=ru-RU`, () => {
-            ymaps.ready(init);
+            window.ymaps.ready(init);
         });
     }, []);
 
@@ -80,4 +80,7 @@ const YMap = () => {
         </div>
     )
 }
-export default YMap
+export default Map
+
+
+
