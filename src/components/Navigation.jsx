@@ -3,8 +3,8 @@ import logo from '../assets/lskNoBg.png'
 const Navigation = () => {
 
     return (
-        <nav className="w-full z-50 bg-[#2b2d42] min-w-[742px]">
-            <div className="mx-auto max-w-7xl px-2 md:py-5 sm:px-6 lg:px-8">
+        <nav className="sticky top-1.5 opacity-70 w-full z-50 bg-linear-to-b from-[#00d9eb] to-[#016bfb] min-w-[742px]">
+            <div className="mx-auto px-2 md:py-5 sm:px-6 lg:px-8">
                 <div className="relative flex h-16 items-center justify-between">
                     <div className="absolute inset-y-0 left-0 flex items-center sm:hidden">
                         {/*Mobile menu button*/}
@@ -34,25 +34,25 @@ const Navigation = () => {
                             </svg>
                         </button>
                     </div>
-                    <div className="flex flex-1 items-center justify-center">
+                    {/*<div className="flex flex-1 items-center justify-center">
                         <div className="flex justify-start items-center">
-                            <img className="h-14 w-auto"
+                            <img className="h-14 w-auto sm:hidden"
                                  src={logo}
                                  alt="Your Company"/>
-                        </div>
-                        <div className="hidden flex-1 sm:ml-6 sm:block">
-                            <div className="flex justify-center space-x-28">
-                                {/* Current: "bg-gray-900 text-white", D1efault: "text-gray-300 hover:bg-gray-700 hover:text-white" */}
-                                <a href="#history"
-                                   className="rounded-md px-3 py-2 text-2xl font-medium text-gray-300 hover:bg-gray-700 hover:text-white">О
-                                    Нас</a>
-                                <a href="#hero"
-                                   className="rounded-md px-3 py-2 text-2xl font-medium text-gray-300 hover:bg-gray-700 hover:text-white">Продукция</a>
-                                <a href="#footer"
-                                   className="rounded-md px-3 py-2 text-2xl font-medium text-gray-300 hover:bg-gray-700 hover:text-white">Контакты</a>
-                            </div>
+                        </div>*/}
+                    <div className="hidden flex-1 sm:ml-6 sm:block">
+                        <div className="flex justify-evenly">
+                            {/* Current: "bg-gray-900 text-white", D1efault: "text-gray-300 hover:bg-gray-700 hover:text-white" */}
+                            <a href="#header"
+                               className="rounded-md px-3 py-2 text-2xl font-medium text-[#f3fcff] hover:bg-gray-700 hover:text-white">О
+                                нас</a>
+                            <a href="#products"
+                               className="rounded-md px-3 py-2 text-2xl font-medium text-[#f3fcff] hover:bg-gray-700 hover:text-white">Продукция</a>
+                            <a href="#footer"
+                               className="rounded-md px-3 py-2 text-2xl font-medium text-[#f3fcff] hover:bg-gray-700 hover:text-white">Контакты</a>
                         </div>
                     </div>
+                    {/*</div>*/}
 
                 </div>
             </div>
@@ -62,12 +62,12 @@ const Navigation = () => {
                 <div className="space-y-1 px-2 pt-2 pb-3">
                     {/* Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" */}
 
-                    <a href="#"
+                    <a href="#way"
                        className="block rounded-md px-3 py-2 text-base font-medium text-gray-300 hover:bg-gray-700 hover:text-white">О
                         нас</a>
-                    <a href="#"
+                    <a href="#products"
                        className="block rounded-md px-3 py-2 text-base font-medium text-gray-300 hover:bg-gray-700 hover:text-white">Продукция</a>
-                    <a href="#"
+                    <a href="#footer"
                        className="block rounded-md px-3 py-2 text-base font-medium text-gray-300 hover:bg-gray-700 hover:text-white">Контакты</a>
                 </div>
             </div>

@@ -43,16 +43,21 @@ const Way = () => {
             <div className="flex flex-wrap">
                 <div className="w-1/2 p-10">
                     {isLoaded ? <div
-                        id="map"
-                        className="map-block border-8 border-gray-500 rounded-xl"
-                        /*высота карты. цифра - для ручной регулировки*/
-                        style={{height: heightMap - 80}}
-                    /> : <div
-                        className="flex w-full justify-center items-center"
-                        style={{height: heightMap - 80}}
+                        className="bg-gradient-to-b from-[#00ede7] to-[#0057ff] rounded-xl p-1"
                     >
-                        <img className="h-full border-8 border-gray-500 rounded-xl"
+                        <div
+                            id="map"
+                            className="map-block"
+                            /*высота карты. цифра - для ручной регулировки*/
+                            style={{height: heightMap - 80}}
+                        />
+                    </div> : <div
+                        className=" w-full justify-center items-center bg-gradient-to-b from-[#00ede7] to-[#0057ff] rounded-xl p-1 hidden lg:block"
+
+                    >
+                        <img className="h-full border-1 border-grad rounded-xl"
                              src={logo}
+                             style={{height: heightMap - 80, maxHeight: 332, maxWidth: 1054}}
                              alt="Your Company"/>
                     </div>}
                 </div>
@@ -60,9 +65,9 @@ const Way = () => {
                     className="w-1/2 p-10 h-fit"
                     ref={heightDivText}
                 >
-                    <h1 className="text-center">О нас</h1>
+                    <h1 className="text-center text-[#0056fe] text-2xl font-medium tracking-wider leading-normal">О нас</h1>
                     {aboutCompany && aboutCompany.map((text, index) => (
-                        <p key={index} className="text-md indent-8 text-black">
+                        <p key={index} className="text-md py-2 indent-8 text-black">
                             {text}
                         </p>
                     ))}
