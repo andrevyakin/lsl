@@ -4,9 +4,14 @@
     scroll-behavior: smooth;
 }
 
-body{
-    background: #8d99ae;
-    color: #edf2f4;
+@layer base {
+    body {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        background: #8d99ae;
+        color: #edf2f4;
+    }
 }
 
 .map-block{

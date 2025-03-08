@@ -1,16 +1,15 @@
-import Header from "./components/Header.jsx";
-import Hero from "./components/Hero.jsx";
+import Navigation from "./components/Navigation.jsx";
 import Footer from "./components/Footer.jsx";
-import History from "./components/History.jsx";
-
-import Map from "./components/Map.jsx";
+import Way from "./components/Way.jsx";
+import Header from "./components/Header.jsx";
 
 const App = () => {
     return (
         <div className="pt-[1rem]">
             <Header/>
-            <History/>
-
+            <Navigation/>
+            <Way/>
+            <Footer/>
 
         </div>
     )
