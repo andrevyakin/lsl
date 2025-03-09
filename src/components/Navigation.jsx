@@ -1,5 +1,3 @@
-import logo from '../assets/lskNoBg.png'
-
 const Navigation = () => {
 
     return (
